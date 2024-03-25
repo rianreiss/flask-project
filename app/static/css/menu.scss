@@ -1,0 +1,24 @@
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical apenas quando necessário */
+    max-height: 400px;
+    box-sizing: border-box;
+}
+
+.mes {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.despesas,
+.receitas {
+    grid-column: span 2; /* Ocupa duas colunas */
+    margin-top: 10px;
+}
+
+.saldo {
+    margin-top: 10px;
+}
