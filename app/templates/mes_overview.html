@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/overview.css') }}">
+
+<div class="overview">
+  <h1>{{ nome_mes }}</h1>
+
+  <div class="despesas">
+    <h2>Despesas</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Valor</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+
+      {% for despesa in despesas %}
+        <tbody>
+          <tr>
+            <td>{{ despesa.descricao }}</td>
+            <td>{{ despesa.valor }}</td>
+            <th><a href="#">Editar</a> <a href="#">Excluir</a></th>
+          </tr>
+        </tbody>
+      {% endfor %}
+    </table>
+  </div>
+
+  <div class="receitas">
+    <h2>Receitas</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Valor</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+
+      {% for receita in receitas %}
+        <tbody>
+          <tr>
+            <td>{{ receita.descricao }}</td>
+            <td>{{ receita.valor }}</td>
+            <th><a href="#">Editar</a> <a href="#">Excluir</a></th>
+          </tr>
+        </tbody>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+{% endblock %}
