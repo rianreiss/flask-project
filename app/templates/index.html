@@ -1,13 +1,26 @@
-{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block content %}
-<!-- Conteúdo específico da página aqui -->
-<div>
-    <h2>Olá fulano de tal, bem-vindo.</h2>
-    <p>Aqui está o conteúdo principal da página.</p>
-    <ul>
-        <li><a href="/menu">Visao Geral</a></li>
-        <li><a href="/relatorio">Extrair relatórios</a></li>
-    </ul>
-</div>
-{% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% extends 'layout.html' %}
+
+    {% block content %}
+    <!-- Conteúdo específico da página aqui -->
+    <div>
+        <h2>Olá fulano de tal, bem-vindo.</h2>
+        <p>Aqui está o conteúdo principal da página.</p>
+        <ul>
+            <li><a href="/menu">Visao Geral</a></li>
+            <li><a href="/relatorio">Extrair relatórios</a></li>
+        </ul>
+    </div>
+    {% endblock %}
+</body>
+
+</html>
