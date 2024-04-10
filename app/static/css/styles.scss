@@ -1,8 +1,10 @@
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+$cor1: #76928a;
+$cor1dark: #303d39;
+$cor2: #F2E8DF;
+$cor3: #F2B263;
+$cor4: #F28585;
+$cor5: #F2C6C2;
+
 
 /* Estilo para o cabeçalho */
 header {
@@ -10,12 +12,59 @@ header {
     box-sizing: border-box;
     top: 0;
     width: 100%;
-    background-color: #333; /* Altere a cor conforme necessário */
-    color: #fff; /* Altere a cor do texto conforme necessário */
     padding: 10px;
+    color: $cor2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $cor1;
+    font-weight: bold;
+
+    h1 {
+        font-size: 50px;
+    }
+
+    ul {
+        display: flex;
+        padding: 0;
+        flex-direction: row;
+        gap: 75px;
+        justify-content: space-between;
+
+        li {
+            list-style-type: none;
+
+            a {
+                color: $cor2;
+                border: 1px solid $cor2;
+                display: flex;
+                padding: 6px;
+                border-radius: 5px;
+                font-size: 20px;
+                text-decoration: none;
+
+                &:hover {
+                    color: $cor3;
+                    border: 1px solid $cor3;
+                }
+            }
+        }
+    }
+
+}
+
+main {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
 /* Estilo para o rodapé */
@@ -24,8 +73,13 @@ footer {
     box-sizing: border-box;
     bottom: 0;
     width: 100%;
-    background-color: #333; /* Altere a cor conforme necessário */
-    color: #fff; /* Altere a cor do texto conforme necessário */
+    background-color: $cor4;
+    /* Altere a cor conforme necessário */
+    color: $cor1dark;
+    font-weight: bold;
+    /* Altere a cor do texto conforme necessário */
     padding: 10px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 }

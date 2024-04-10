@@ -1,3 +1,9 @@
+@charset "UTF-8";
+.overview {
+  overflow-y: auto; /* Adiciona uma barra de rolagem vertical apenas quando necessário */
+  max-height: 400px;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
