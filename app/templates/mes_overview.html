@@ -5,80 +5,84 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/overview.css') }}">
 <script type="text/javascript" src="{{ url_for('static', filename='scripts/overview.js') }}"></script>
 
-<div class="overview">
+<div class="main-container">
+
   <h1 id="teste">{{ nome_mes }}</h1>
+  <div class="overview">
 
-  <div class="despesas">
-    <h2>Despesas</h2>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Descrição</th>
-          <th>Valor</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
+    <div class="despesas">
+      <h2>Despesas</h2>
 
-      <tbody>
-        {% for despesa in despesas %}
-            <tr>
-              <td>{{ despesa.descricao }}</td>
-              <td>{{ despesa.valor }}</td>
-              <th><a href="#">Editar</a> <a href="{{url_for('excluir_desp',id_desp=despesa.id)}}">Excluir</a></th>
-            </tr>
-        {% endfor %}
-        <tr id="add-form-d" style="display: none;">
-          <form action="{{ url_for('overview', nome_mes=nome_mes) }}" method="POST">
-            <td><input type="text" placeholder="Descrição" name="descricao" id="descD"></td>
-            <td><input type="number" placeholder="Valor" name="valor"></td>
-            <td style="display: none;"><input type="number" name="mes" id="mes" value="{{ mes_id }}"></td>
-            <td><button type="submit">Salvar</button></td>
-          </form>
-        </tr>
-        <tr id="add-D">
-          <td></td>
-          <td></td>
-          <th><button id="add-button-d" onclick="addD()">Adicionar</button></th>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
 
-  <div class="receitas">
-    <h2>Receitas</h2>
+        <tbody>
+          {% for despesa in despesas %}
+          <tr>
+            <td>{{ despesa.descricao }}</td>
+            <td>{{ despesa.valor }}</td>
+            <th><a href="#">Editar</a> <a href="{{url_for('excluir_desp',id_desp=despesa.id)}}">Excluir</a></th>
+          </tr>
+          {% endfor %}
+          <tr id="add-form-d" style="display: none;">
+            <form action="{{ url_for('overview', nome_mes=nome_mes) }}" method="POST">
+              <td><input type="text" placeholder="Descrição" name="descricao" id="descD"></td>
+              <td><input type="number" placeholder="Valor" name="valor"></td>
+              <td style="display: none;"><input type="number" name="mes" id="mes" value="{{ mes_id }}"></td>
+              <td><button type="submit">Salvar</button></td>
+            </form>
+          </tr>
+          <tr id="add-D">
+            <td></td>
+            <td></td>
+            <th><button id="add-button-d" onclick="addD()">Adicionar</button></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Descrição</th>
-          <th>Valor</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
+    <div class="receitas">
+      <h2>Receitas</h2>
 
-      <tbody>
-        {% for receita in receitas %}
+      <table>
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for receita in receitas %}
           <tr>
             <td>{{ receita.descricao }}</td>
             <td>{{ receita.valor }}</td>
             <th><a href="#">Editar</a> <a href="#">Excluir</a></th>
           </tr>
-        {% endfor %}
-        <tr id="add-R">
-          <td></td>
-          <td></td>
-          <th><button onclick="addR()">Adicionar</button></th>
-        </tr>
-        <tr id="add-form-r" style="display: none;">
-          <form action="#" method="POST">
-            <td><input type="text" id="descR" placeholder="Descrição"></td>
-            <td><input type="number" placeholder="Valor"></td>
-            <td><button type="submit">Salvar</button></td>
-          </form>
-        </tr>
-      </tbody>
-    </table>
+          {% endfor %}
+          <tr id="add-R">
+            <td></td>
+            <td></td>
+            <th><button onclick="addR()">Adicionar</button></th>
+          </tr>
+          <tr id="add-form-r" style="display: none;">
+            <form action="#" method="POST">
+              <td><input type="text" id="descR" placeholder="Descrição"></td>
+              <td><input type="number" placeholder="Valor"></td>
+              <td><button type="submit">Salvar</button></td>
+            </form>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 

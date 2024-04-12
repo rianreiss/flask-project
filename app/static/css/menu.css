@@ -6,12 +6,20 @@
   overflow-y: auto; /* Adiciona uma barra de rolagem vertical apenas quando necessário */
   max-height: 400px;
   box-sizing: border-box;
+  padding: 20px;
 }
 
 .mes {
   border: 1px solid #ccc;
   padding: 20px;
   text-align: center;
+  background-color: #b0cfc6;
+  box-shadow: rgba(184, 88, 88, 0.24) 3px 3px 8px;
+}
+.mes h3 {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 0;
 }
 
 .despesas,

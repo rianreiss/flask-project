@@ -2,14 +2,39 @@
 .overview {
   overflow-y: auto; /* Adiciona uma barra de rolagem vertical apenas quando necessário */
   max-height: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.despesas {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 0 0 5% 0;
+}
+
+.receitas {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 0 0 5% 0;
 }
 
 table {
-  width: 100%;
+  width: 95%;
   border-collapse: collapse;
+  padding: 10px;
+  border: 1px solid #303d39;
 }
 table th, table td {
   padding: 8px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  background-color: #b0cfc6;
+  border-bottom: 1px solid #303d39;
 }/*# sourceMappingURL=overview.css.map */
