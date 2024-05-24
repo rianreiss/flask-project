@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!-- Conteúdo específico da página aqui -->
+<div class="container">
+    <h1>Editar Despesa</h1>
+    <form action="{{ url_for('editar', despesa_id=despesa.id) }}" method="POST">
+        <label for="descD">Descrição:</label>
+        <input type="text" name="descricao" id="descD" value="{{ despesa.descricao }}">
+        <label for="valorD">Valor:</label>
+        <input type="number" name="valor" id="valorD" value="{{ despesa.valor }}" step="0.01">
+        <button type="submit">Salvar</button>
+    </form>
+</div>
+{% endblock %}

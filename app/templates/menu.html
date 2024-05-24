@@ -9,9 +9,18 @@
     {% for mes in meses %}
         <div class="mes">
             <h3>{{mes.mes}}</h3>
-            <div class="despesas">Despesas: {{mes.total_despesas}}</div>
-            <div class="receitas">Receitas: {{mes.total_receitas}}</div>
-            <div class="saldo">Saldo: {{mes.saldo}}</div>
+            <div class="despesas infos">
+                <div>Despesas:</div>
+                <div>{{mes.total_despesas}}</div>
+            </div>
+            <div class="receitas infos">
+                <div>Receitas:</div>
+                <div>{{mes.total_receitas}}</div>
+            </div>
+            <div class="saldo infos">
+                <div>Saldo:</div>
+                <div>{{mes.saldo}}</div>
+            </div>  
             <a href="{{ url_for('overview', nome_mes=mes.mes) }}" class="btn-editar">Editar</a>
         </div>
     {% endfor %}
