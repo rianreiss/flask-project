@@ -7,45 +7,73 @@ $cor4: #F28585;
 $cor4dark: #b85858;
 $cor5: #F2C6C2;
 
-
-.overview {
-    overflow-y: auto; /* Adiciona uma barra de rolagem vertical apenas quando necessário */
-    max-height: 400px;
+.main-container {
+    margin: 0;
     padding: 20px;
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
+    box-sizing: border-box;
+    height: 100%;
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 2.5em;
+    }
+
+    .overview {
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+        border: 1px solid black;
+
+        .container {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            flex-direction: row;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            width: 100%;
+            gap: 30px;
+
+            .despesas {
+                border: 1px solid black;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+            
+            }
+
+            .receitas {
+                border: 1px solid black;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                padding: 0 0 5% 0;
+            
+            
+            }
+
+        }
+    }
+
 }
 
-
-.despesas {
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    padding: 0 0 5% 0;
-
-}
-.receitas {
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    padding: 0 0 5% 0;
-
-
-}
 
 table {
     width: 95%;
     border-collapse: collapse;
     padding: 10px;
-    border: 1px solid $cor1dark;
 
 
-    th, td {
+    th,
+    td {
         padding: 8px;
         text-align: left;
         background-color: $cor1light;

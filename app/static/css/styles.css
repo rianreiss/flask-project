@@ -1,35 +1,38 @@
 @charset "UTF-8";
+* {
+  font-family: "Helvetica", sans-serif;
+}
+
 /* Estilo para o cabeçalho */
 header {
-  position: relative;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  top: 0;
   width: 100%;
-  padding: 2% 0 0.2% 0;
+  height: 30vh;
   color: #F2E8DF;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: start;
   background-color: #76928a;
   font-weight: bold;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
 }
 header h1 {
   font-size: 50px;
   text-shadow: 2px 2px #303d39;
 }
-header ul {
+header nav ul {
   display: flex;
   padding: 0;
   flex-direction: row;
   gap: 75px;
   justify-content: space-between;
 }
-header ul li {
+header nav ul li {
   list-style-type: none;
 }
-header ul li a {
+header nav ul li a {
   color: #F2E8DF;
   border: 1px solid #F2E8DF;
   display: flex;
@@ -38,7 +41,7 @@ header ul li a {
   font-size: 20px;
   text-decoration: none;
 }
-header ul li a:hover {
+header nav ul li a:hover {
   color: #F2B263;
   border: 1px solid #F2B263;
 }
@@ -47,6 +50,38 @@ main {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: 60vh;
+  overflow: auto;
+  background-color: #3d403f;
+  color: #F2E8DF;
+}
+main .container {
+  margin: 0;
+  padding: 0 10%;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 60px;
+}
+main .container h2 {
+  width: 100%;
+  text-align: start;
+}
+main .container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 60%;
+}
+
+#login {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 1.4em;
 }
 
 body {
@@ -57,17 +92,15 @@ body {
 
 /* Estilo para o rodapé */
 footer {
-  position: fixed;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  bottom: 0;
+  height: 10vh;
   width: 100%;
   background-color: #F28585;
-  /* Altere a cor conforme necessário */
   color: #303d39;
   font-weight: bold;
-  /* Altere a cor do texto conforme necessário */
-  padding: 10px;
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,4 @@
+$dark: #3d403f;
 $cor1: #76928a;
 $cor1dark: #303d39;
 $cor2: #F2E8DF;
@@ -5,49 +6,54 @@ $cor3: #F2B263;
 $cor4: #F28585;
 $cor5: #F2C6C2;
 
+* {
+    font-family: "Helvetica", sans-serif;
+}
 
 /* Estilo para o cabeçalho */
 header {
-    position: relative;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    top: 0;
     width: 100%;
-    padding: 2% 0 0.2% 0;
+    height: 30vh;
     color: $cor2;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: start;
     background-color: $cor1;
     font-weight: bold;
-    backdrop-filter: blur(10px);
 
     h1 {
         font-size: 50px;
         text-shadow: 2px 2px $cor1dark;
     }
 
-    ul {
-        display: flex;
-        padding: 0;
-        flex-direction: row;
-        gap: 75px;
-        justify-content: space-between;
-
-        li {
-            list-style-type: none;
-
-            a {
-                color: $cor2;
-                border: 1px solid $cor2;
-                display: flex;
-                padding: 6px;
-                border-radius: 5px;
-                font-size: 20px;
-                text-decoration: none;
-
-                &:hover {
-                    color: $cor3;
-                    border: 1px solid $cor3;
+    nav {
+        ul {
+            display: flex;
+            padding: 0;
+            flex-direction: row;
+            gap: 75px;
+            justify-content: space-between;
+    
+            li {
+                list-style-type: none;
+    
+                a {
+                    color: $cor2;
+                    border: 1px solid $cor2;
+                    display: flex;
+                    padding: 6px;
+                    border-radius: 5px;
+                    font-size: 20px;
+                    text-decoration: none;
+    
+                    &:hover {
+                        color: $cor3;
+                        border: 1px solid $cor3;
+                    }
                 }
             }
         }
@@ -59,6 +65,43 @@ main {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    height: 60vh;
+    overflow: auto;
+    background-color: $dark;
+    color: $cor2;
+
+    .container {
+        margin: 0;
+        padding: 0 10%;
+        box-sizing: border-box;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 60px;
+
+        h2 {
+            width: 100%;
+            text-align: start;
+        }
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height:60%;
+
+        }
+    }
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.4em;
+
 }
 
 
@@ -71,17 +114,15 @@ body {
 
 /* Estilo para o rodapé */
 footer {
-    position: fixed;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    bottom: 0;
+    height: 10vh;
     width: 100%;
     background-color: $cor4;
-    /* Altere a cor conforme necessário */
     color: $cor1dark;
     font-weight: bold;
-    /* Altere a cor do texto conforme necessário */
-    padding: 10px;
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
